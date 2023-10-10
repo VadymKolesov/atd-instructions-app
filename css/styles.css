@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-Light.ttf) format('ttf');
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-Regular.ttf) format('ttf');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-Medium.ttf) format('ttf');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url(../fonts/Ubuntu-Bold.ttf) format('ttf');
+    font-weight: 700;
+  }
+
+:root {
+    --juce-orange: #F85A00;
+    --nightmare: #132530;
+    --smoke-gray: #B8BEC1;
+    --white: #ffffff;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.list {
+    list-style: none;
+}
+
+.body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif, Arial, sans-serif;
+    background-color: var(--nightmare);
+}
+
+.container {
+    max-width: 768px;
+    padding: 0 94px;
+    margin: 0 auto;
+}
+
+/*? ----- NAVIGATION ----- */
+
+.navigate {
+    display: flex;
+    justify-content: end;
+    margin-top: 83px;
+}
+
+.burger-icon {
+    stroke: var(--white);
+}
+
+/*? ----- NAVIGATION ----- */
+
+/* ----- BANNER ----- */
+
+.main {
+    min-height: calc(100vh - 116px - 177px);
+}
+
+.section-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 31px;
+    padding-top: 140px;
+}
+
+.desc-banner {
+    color: var(--smoke-gray);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 1.85;
+    letter-spacing: -0.02em;
+    text-align: center;
+    width: 318px;
+}
+
+/* ----- BANNER ----- */
+
+/*! ----- CATEGORIES ----- */
+
+.section-categories {
+    padding-top: 114px;
+    display: flex;
+    justify-content: center;
+}
+
+.orange-item {
+    background-color: var(--juce-orange);
+    color: var(--white);
+}
+
+.white-item {
+    background-color: var(--white);
+    color: var(--nightmare);
+}
+
+.category-list{
+    max-width: 580px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 33px) / 2);
+    height: 127px;
+}
+
+.category-name {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*! ----- CATEGORIES ----- */
+
+/*TODO ----- ASSIST ----- */
+
+.footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.assist-message {
+    color: var(--smoke-gray);
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.85;
+    letter-spacing: -0.02em;
+}
+
+/*TODO ----- ASSIST ----- */
