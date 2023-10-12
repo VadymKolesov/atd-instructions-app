@@ -93,8 +93,12 @@ button {
 
 .navigate {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     margin-top: 83px;
+}
+
+.btn-back{
+    fill: var(--white);
 }
 
 .btn-burger {
@@ -163,6 +167,7 @@ button {
 
 .category-link {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 32px;
@@ -171,7 +176,6 @@ button {
     letter-spacing: -0.012em;
     text-transform: uppercase;
     height: 127px;
-    
 }
 
 /*! ----- CATEGORIES ----- */
@@ -202,6 +206,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
     transition: all 400ms ease-in-out;
 }
 
@@ -228,8 +233,9 @@ button {
 
 .is-hidden {
     overflow: hidden;
+    visibility: hidden;
     pointer-events: none;
-    transform: translateX(100%);
+    left: 100vw;
 }
 
 .no-scroll {
@@ -272,12 +278,12 @@ button {
 
 .hide-arrow-icon{
     fill: var(--white);
-    transition: transform 200ms ease-in-out;
+    transition: transform 400ms ease-in-out;
 }
 
 .rotate-hide-icon{
     transform: rotate(90deg);
-    transition: transform 200ms ease-in-out;
+    transition: transform 400ms ease-in-out;
 }
 
 /* ----- BACKDROP-LIST ----- */
@@ -291,6 +297,7 @@ button {
     display: flex;
     max-height: 0;
     overflow: hidden;
+    visibility: hidden;
     opacity: 0.5;
     transition: all 400ms cubic-bezier(.9,-0.05,.18,.97); 
 }
@@ -304,9 +311,9 @@ button {
 
 .language-name {
     color: var(--white);
-font-size: 32px;
-line-height: 1.15;
-letter-spacing: -0.012em;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
 }
 
 .language-item-select{
@@ -318,8 +325,9 @@ letter-spacing: -0.012em;
 }
 
 .show {
-    opacity: 1;
+    visibility: visible;
     margin-top: 39px;
+    opacity: 1;
     max-height: 259px;
     transition: all 400ms cubic-bezier(.9,-0.05,.18,.97);
 }

@@ -12,38 +12,27 @@
     }
   })();
 
-  function languageChoose() {
-    document.getElementById("chooseLanguage").classList.toggle("show");
-}
 
-window.onclick = function(event) {
-  if (!event.target.matches('.language-btn')) {
 
-    var dropdowns = document.getElementsByClassName("languages");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+
+languageChoose.onclick = function() {
+    const dropdownItem = document.getElementById("dropdown");
+    const arrowHide = document.getElementById("hideArrow");
+    const languageName = document.getElementById("languageName");
+    dropdownItem.classList.toggle("show");
+    arrowHide.classList.toggle("rotate-hide-icon");
+
+
+    if (!dropdownItem.classList.contains('show')) {
+        arrowHide.classList.remove("rotate-hide-icon");
+
+};
 };
 
-function rotateArrow() {
-document.getElementById("rotate").classList.toggle("rotate-hide-icon");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.language-btn')) {
 
-    var rotate = document.getElementsByClassName("hide-arrow-icon");
-    var i;
-    for (i = 0; i < rotate.length; i++) {
-      var rotateItem = rotate[i];
-      if (rotateItem.classList.contains('rotate-hide-icon')) {
-        rotateItem.classList.remove('rotate-hide-icon');
-      }
-    }
-  }
-};
-
+// dropdownItem.onclick = function() {
+//     if (dropdownItem.classList.contains('show')) {
+//         dropdownItem.classList.remove('show');
+//     };
+// };
+    

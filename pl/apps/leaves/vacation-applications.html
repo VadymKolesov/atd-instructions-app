@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Autodoc.help</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>HR Department</title>
 </head>
 <body class="body">
    <header class="header container">
-    <nav class="navigate" style="justify-content: end;">
-        <a href="#" class="btn-back link" style="display: none;">
+    <nav class="navigate">
+        <a href="/pl/apps/applications.html" class="btn-back link">
             <svg class="back-icon" width="33" height="33">
-                <use href="./images/svg-group.svg#icon-back"></use>
+                <use href="/images/svg-group.svg#icon-back"></use>
             </svg>
         </a>
         <button type="button" class="btn-burger" data-menu-open>
             <svg class="burger-icon" width="33" height="33">
-                <use href="./images/svg-group.svg#icon-burger-menu"></use>
+                <use href="/images/svg-group.svg#icon-burger-menu"></use>
             </svg>
         </button>
     </nav>
@@ -25,13 +25,13 @@
             <div class="close-menu">
                 <button type="button" class="btn-close" data-menu-close>
                     <svg class="close-icon" width="33" height="33">
-                        <use href="./images/svg-group.svg#icon-close-button"></use>
+                        <use href="/images/svg-group.svg#icon-close-button"></use>
                     </svg>
                 </button>
             </div>
             <ul class="menu-list list">
                 <li class="menu-list-item">
-                    <a href="./index.html" class="menu-list-link link">
+                    <a href="/index.html" class="menu-list-link link">
                         Strona główna
                     </a>
                 </li>
@@ -39,13 +39,13 @@
                     <div id="languageChoose" class="menu-list-link language-btn">
                         Wybór języka
                         <svg id="hideArrow" class="hide-arrow-icon" width="33" height="33">
-                            <use href="./images/svg-group.svg#icon-hide-arrow"></use>
+                            <use href="/images/svg-group.svg#icon-hide-arrow"></use>
                         </svg>
                     </div>
                     <div id="dropdown" class="languages">
                         <a href="#" class="language-item language-item-select link">
                             <svg class="polish-icon" width="45" height="33">
-                                <use href="./images/svg-group.svg#icon-poland"></use>
+                                <use href="/images/svg-group.svg#icon-poland"></use>
                             </svg>
                             <span id="languageName" class="language-name">
                                 Polski
@@ -53,7 +53,7 @@
                         </a>
                         <a href="#" class="language-item link">
                             <svg class="polish-icon" width="45" height="33">
-                                <use href="./images/svg-group.svg#icon-ukraine"></use>
+                                <use href="/images/svg-group.svg#icon-ukraine"></use>
                             </svg>
                             <span class="language-name">
                                 Українська
@@ -61,7 +61,7 @@
                         </a>
                         <a href="#" class="language-item link">
                             <svg class="polish-icon" width="45" height="33">
-                                <use href="./images/svg-group.svg#icon-usa"></use>
+                                <use href="/images/svg-group.svg#icon-usa"></use>
                             </svg>
                             <span class="language-name">
                                 English
@@ -69,7 +69,7 @@
                         </a>
                         <a href="#" class="language-item link">
                             <svg class="polish-icon" width="45" height="33">
-                                <use href="./images/svg-group.svg#icon-russia"></use>
+                                <use href="/images/svg-group.svg#icon-russia"></use>
                             </svg>
                             <span class="language-name">
                                 Русский
@@ -89,7 +89,7 @@
    <main class="main container">
     <section class="section-banner">
         <svg class="logo-icon" width="439" height="56">
-            <use href="./images/svg-group.svg#icon-logo-atd"></use>
+            <use href="/images/svg-group.svg#icon-logo-atd"></use>
         </svg>
         <p class="desc-banner">
             Centrum informacji dla pracowników AUTODOC Logistics
@@ -98,24 +98,29 @@
     
     <section class="section-categories">
         <ul class="category-list list">
-            <li class="category">
-                <a href="./pl/hr-department.html" class="category-link link orange-item" style="border-radius: 15px 15px 0 15px">
-                    Kadry
+            <li class="category" style="width: 100%;">
+                <a href="#" class="category-link link orange-item" style="border-radius: 0 15px 0 15px;">
+                    Urlop wypoczynkowy
                 </a>
             </li>
             <li class="category">
-                <a href="#" class="category-link link white-item" style="border-radius: 15px 15px 15px 0">
-                    Kontakty
+                <a href="#" class="category-link link white-item" style="border-radius: 15px 15px 0 15px; height: 164px;">
+                    Na <span>żądanie</span>
                 </a>
             </li>
             <li class="category">
-                <a href="#" class="category-link link white-item" style="border-radius: 15px 0 15px 15px">
-                    FAQ
+                <a href="#" class="category-link link orange-item" style="border-radius: 15px 15px 15px 0; height: 164px;">
+                    Bezpłatny
                 </a>
             </li>
             <li class="category">
-                <a href="#" class="category-link link orange-item" style="border-radius: 0 15px 15px 15px">
-                    Regulaminy
+                <a href="#" class="category-link link orange-item" style="border-radius: 15px 0 15px 15px; height: 164px;">
+                    Okolicz <span>nościowy</span>
+                </a>
+            </li>
+            <li class="category">
+                <a href="#" class="category-link link white-item" style="border-radius: 0 15px 15px 15px; height: 164px;">
+                    Opieka nad <span>dzieckiem</span>
                 </a>
             </li>
         </ul>
@@ -124,6 +129,6 @@
    <footer class="footer container">
         <p class="assist-message">Wybierz kategorię</p>
    </footer>
-   <script src="./js/script.js"></script>
+   <script src="/js/script.js"></script>
 </body>
 </html>
