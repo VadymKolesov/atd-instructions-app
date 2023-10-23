@@ -54,5 +54,12 @@
 <path fill="#dd2525" style="fill: var(--color2, #dd2525)" d="M0 21.161h46.452v5.161c0 2.85-2.311 5.161-5.161 5.161h-36.129c-2.85 0-5.161-2.311-5.161-5.161v-5.161z"></path>
 <path fill="#066ccb" style="fill: var(--color3, #066ccb)" d="M0 10.839h46.452v10.323h-46.452v-10.323z"></path>
 </symbol>
+<symbol id="favicon" viewBox="0 0 32 32">
+<path fill="#f85a00" style="fill: var(--color1, #f85a00)" d="M8.278 21.486c1.45 0 2.625 1.175 2.625 2.625v7.889h9.208v-10.514l0-6.78c0-1.45-1.175-2.625-2.625-2.625h-17.486v9.405h8.278z"></path>
+<path fill="#fff" style="fill: var(--color2, #fff)" d="M23.722 10.514c-1.45 0-2.625-1.175-2.625-2.625v-7.889h-9.208v10.514l-0 6.781c0 1.45 1.175 2.625 2.625 2.625h17.486v-9.405h-8.278z"></path>
+</symbol>
+
+
+
 </defs>
 </svg>
