@@ -1,135 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/styles.css">
-    <link rel="icon" type="image/svg" href="../../../images/favicon.svg"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="icon" type="image/svg" href="../../../images/favicon.svg" />
     <title>Vacations</title>
-</head>
-<body class="body">
-   <header class="header container">
-    <nav class="navigate">
-        <a href="../../../pl/apps/applications.html" class="btn-back link">
-            <svg class="back-icon" width="33" height="33">
-                <use href="../../../images/svg-group.svg#icon-back"></use>
-            </svg>
+  </head>
+  <body class="body">
+    <header class="header container">
+      <nav class="navigate">
+        <a href="../applications.html" class="btn-back link">
+          <svg class="back-icon" width="33" height="33">
+            <use href="../../../images/svg-group.svg#icon-back"></use>
+          </svg>
         </a>
-        <button type="button" class="btn-burger" data-menu-open>
+        <div class="interactive-nav">
+          <select class="language-choose">
+            <option value="pl">PL</option>
+            <option value="ua">UA</option>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+          <button type="button" class="btn-burger" data-menu-open>
             <svg class="burger-icon" width="33" height="33">
-                <use href="../../../images/svg-group.svg#icon-burger-menu"></use>
+              <use href="../../../images/svg-group.svg#icon-burger-menu"></use>
             </svg>
-        </button>
-    </nav>
-    <div class="backdrop is-hidden" data-menu>
-        <div class="menu container">
-            <div class="close-menu">
-                <button type="button" class="btn-close" data-menu-close>
-                    <svg class="close-icon" width="33" height="33">
-                        <use href="../../../images/svg-group.svg#icon-close-button"></use>
-                    </svg>
-                </button>
-            </div>
-            <ul class="menu-list list">
-                <li class="menu-list-item">
-                    <a href="../../../index.html" class="menu-list-link link">
-                        Strona główna
-                    </a>
-                </li>
-                <li class="menu-list-item">
-                    <div id="languageChoose" class="menu-list-link language-btn">
-                        Wybór języka
-                        <svg id="hideArrow" class="hide-arrow-icon" width="33" height="33">
-                            <use href="../../../images/svg-group.svg#icon-hide-arrow"></use>
-                        </svg>
-                    </div>
-                    <div id="dropdown" class="languages">
-                        <a href="#" class="language-item language-item-select link">
-                            <svg class="polish-icon" width="45" height="33">
-                                <use href="../../../images/svg-group.svg#icon-poland"></use>
-                            </svg>
-                            <span id="languageName" class="language-name">
-                                Polski
-                            </span>
-                        </a>
-                        <a href="#" class="language-item link">
-                            <svg class="polish-icon" width="45" height="33">
-                                <use href="../../../images/svg-group.svg#icon-ukraine"></use>
-                            </svg>
-                            <span class="language-name">
-                                Українська
-                            </span>
-                        </a>
-                        <a href="#" class="language-item link">
-                            <svg class="polish-icon" width="45" height="33">
-                                <use href="../../../images/svg-group.svg#icon-usa"></use>
-                            </svg>
-                            <span class="language-name">
-                                English
-                            </span>
-                        </a>
-                        <a href="#" class="language-item link">
-                            <svg class="polish-icon" width="45" height="33">
-                                <use href="../../../images/svg-group.svg#icon-russia"></use>
-                            </svg>
-                            <span class="language-name">
-                                Русский
-                            </span>
-                        </a>
-                    </div>
-                </li>
-                <li class="menu-list-item">
-                    <a href="#" class="menu-list-link link">
-                        O aplikacji
-                    </a>
-                </li>
-            </ul>
+          </button>
         </div>
-       </div>
-   </header>
-   <main class="main container">
-    <section class="section-banner">
+      </nav>
+      <div class="backdrop is-hidden" data-menu>
+        <div class="menu container">
+          <div class="close-menu">
+            <button type="button" class="btn-close" data-menu-close>
+              <svg class="close-icon" width="33" height="33">
+                <use
+                  href="../../../images/svg-group.svg#icon-close-button"
+                ></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="menu-list list">
+            <li class="menu-list-item">
+              <a
+                href="../../../index.html"
+                class="menu-list-link link"
+                data-lang="homepage"
+              >
+                Strona główna
+              </a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#" class="menu-list-link link" data-lang="about">
+                O aplikacji
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main container">
+      <section class="section-banner">
         <svg class="logo-icon" width="439" height="56">
-            <use href="../../../images/svg-group.svg#icon-logo-atd"></use>
+          <use href="../../../images/svg-group.svg#icon-logo-atd"></use>
         </svg>
-        <p class="desc-banner">
-            Centrum informacji dla pracowników AUTODOC Logistics
+        <p class="desc-banner" data-lang="desc-banner">
+          Centrum informacji dla pracowników AUTODOC Logistics
         </p>
-    </section>
-    
-    <section class="section-categories">
+      </section>
+      <section class="section-categories">
         <ul class="category-list list">
-            <li class="category" style="width: 100%;">
-                <a href="./filling-instructions/annual-leave.html" class="category-link link orange-item" style="border-radius: 0 15px 0 15px;">
-                    Urlop wypoczynkowy
-                </a>
-            </li>
-            <li class="category">
-                <a href="#" class="category-link link white-item" style="border-radius: 15px 15px 0 15px; height: 164px;">
-                    Na <span>żądanie</span>
-                </a>
-            </li>
-            <li class="category">
-                <a href="#" class="category-link link orange-item" style="border-radius: 15px 15px 15px 0; height: 164px;">
-                    Bezpłatny
-                </a>
-            </li>
-            <li class="category">
-                <a href="#" class="category-link link orange-item" style="border-radius: 15px 0 15px 15px; height: 164px;">
-                    Okolicz <span>nościowy</span>
-                </a>
-            </li>
-            <li class="category">
-                <a href="#" class="category-link link white-item" style="border-radius: 0 15px 15px 15px; height: 164px;">
-                    Opieka nad <span>dzieckiem</span>
-                </a>
-            </li>
+          <li class="category" style="width: 100%">
+            <a
+              href="../filling-instructions/annual-leave.html"
+              class="category-link link orange-item"
+              style="border-radius: 0 15px 0 15px"
+            >
+              Urlop wypoczynkowy
+            </a>
+          </li>
+          <li class="category">
+            <a
+              href="../filling-instructions/request-leave.html"
+              class="category-link link white-item"
+              style="border-radius: 15px 15px 0 15px; height: 164px"
+            >
+              Na żądanie
+            </a>
+          </li>
+          <li class="category">
+            <a
+              href="../filling-instructions/unpaid-leave.html"
+              class="category-link link orange-item"
+              style="border-radius: 15px 15px 15px 0; height: 164px"
+            >
+              Bezpłatny
+            </a>
+          </li>
+          <li class="category">
+            <a
+              href="../filling-instructions/special-leave.html"
+              class="category-link link orange-item"
+              style="border-radius: 15px 0 15px 15px; height: 164px"
+            >
+              Okolicz nościowy
+            </a>
+          </li>
+          <li class="category">
+            <a
+              href="../filling-instructions/child-care-leave.html"
+              class="category-link link white-item"
+              style="border-radius: 0 15px 15px 15px; height: 164px"
+            >
+              Opieka nad dzieckiem
+            </a>
+          </li>
         </ul>
-    </section>
-   </main>
-   <footer class="footer container">
-        <p class="assist-message">Wybierz kategorię</p>
-   </footer>
-   <script src="../../../js/script.js"></script>
-</body>
+      </section>
+    </main>
+    <footer class="footer container">
+      <p class="assist-message">Wybierz kategorię</p>
+    </footer>
+    <script src="../../../js/lang.js"></script>
+    <script src="../../../js/script.js"></script>
+  </body>
 </html>
