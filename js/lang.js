@@ -107,4 +107,46 @@ const lngArr = {
     en: "Shift Green",
     ru: "Смена Green",
   },
+  "msg-shift-orange": {
+    pl: "Zmiana Orange",
+    ua: "Зміна Orange",
+    en: "Shift Orange",
+    ru: "Смена Orange",
+  },
+  "msg-shift-m13-dark": {
+    pl: "Zmiana M13 Dark",
+    ua: "Зміна M13 Dark",
+    en: "Shift M13 Dark",
+    ru: "Смена M13 Dark",
+  },
+  "msg-shift-blue": {
+    pl: "Zmiana Blue",
+    ua: "Зміна Blue",
+    en: "Shift Blue",
+    ru: "Смена Blue",
+  },
+  "msg-shift-red": {
+    pl: "Zmiana Red",
+    ua: "Зміна Red",
+    en: "Shift Red",
+    ru: "Смена Red",
+  },
+  "msg-shift-brown": {
+    pl: "Zmiana Brown",
+    ua: "Зміна Brown",
+    en: "Shift Brown",
+    ru: "Смена Brown",
+  },
+  "msg-shift-yellow": {
+    pl: "Zmiana Yellow",
+    ua: "Зміна Yellow",
+    en: "Shift Yellow",
+    ru: "Смена Yellow",
+  },
+  "msg-shift-m26-dark": {
+    pl: "Zmiana M26 Dark",
+    ua: "Зміна M26 Dark",
+    en: "Shift M26 Dark",
+    ru: "Смена M26 Dark",
+  },
 };

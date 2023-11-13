@@ -70,3 +70,25 @@ if (modalWarehouse) {
     warehouseList.removeEventListener("click", saveWarehouse);
   }
 }
+
+const upButton = document.querySelector(".up-button");
+
+if (upButton) {
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.documentElement.scrollTop > 1500) {
+      upButton.style.display = "block";
+    } else {
+      upButton.style.display = "none";
+    }
+  }
+
+  upButton.addEventListener("click", toTopScroll);
+
+  function toTopScroll() {
+    document.documentElement.scrollTop = 0;
+  }
+}

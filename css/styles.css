@@ -33,6 +33,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -517,6 +518,29 @@ button {
 }
 
 /*? ----- INSTRUCTION-APPLICATION ----- */
+
+/*! ----- UP-BUTTON ----- */
+
+.up-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  background-color: var(--juce-orange);
+  border-radius: 15px;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  border: none;
+}
+
+.up-arrow {
+  transform: rotate(-90deg);
+  fill: var(--white);
+}
+
+/*! ----- UP-BUTTON ----- */
 
 /* ----- DOCUMENTS ----- */
 

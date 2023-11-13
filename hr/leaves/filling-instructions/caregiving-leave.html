@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="icon" type="image/svg" href="../../../images/favicon.svg" />
+    <title>Vacations</title>
+  </head>
+  <body class="body">
+    <header class="header container">
+      <nav class="navigate">
+        <a href="../applications.html" class="btn-back link">
+          <svg class="back-icon" width="33" height="33">
+            <use href="../../../images/svg-group.svg#icon-back"></use>
+          </svg>
+        </a>
+        <div class="interactive-nav">
+          <select class="language-choose">
+            <option value="pl">PL</option>
+            <option value="ua">UA</option>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+          <button type="button" class="btn-burger" data-menu-open>
+            <svg class="burger-icon" width="33" height="33">
+              <use href="../../../images/svg-group.svg#icon-burger-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div class="backdrop is-hidden" data-menu>
+        <div class="menu container">
+          <div class="close-menu">
+            <button type="button" class="btn-close" data-menu-close>
+              <svg class="close-icon" width="33" height="33">
+                <use
+                  href="../../../images/svg-group.svg#icon-close-button"
+                ></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="menu-list list">
+            <li class="menu-list-item">
+              <a
+                href="../../../index.html"
+                class="menu-list-link link"
+                data-lang="homepage"
+              >
+                Strona główna
+              </a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#" class="menu-list-link link" data-lang="about">
+                O aplikacji
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="instruction-application-page container">
+      <section class="section-banner">
+        <svg class="logo-icon" width="439" height="56">
+          <use href="../../../images/svg-group.svg#icon-logo-atd"></use>
+        </svg>
+        <p class="desc-banner" data-lang="desc-banner">
+          Centrum informacji dla pracowników AUTODOC Logistics
+        </p>
+      </section>
+      <section class="description-application">
+        <div class="description-content">
+          <h2 class="description-title">Wniosek o urlop opiekuńczy</h2>
+          <div class="description-text">
+            <p>
+              Wniosek o urlop opiekuńczy można wykorzystać, jeżeli masz potrzebę
+              zaopiekowania się członkiem rodziny, który mieszka z tobą.
+            </p>
+            <p>
+              W ciągu roku można wykorzystać 5 dni urlopu opiekuńczego. Jest on
+              niepłatny.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="instruction-toggle">
+        <button
+          id="instructionToggle"
+          type="button"
+          class="instruction-toggle-button"
+        >
+          Instrukcja
+          <svg
+            id="hideArrowInstruction"
+            class="toggle-arrow-icon"
+            width="28"
+            height="28"
+          >
+            <use href="../../../images/svg-group.svg#icon-hide-arrow"></use>
+          </svg>
+        </button>
+      </div>
+
+      <section id="dropdownInstruction" class="instruction-application">
+        <ul class="instruction-steps list">
+          <li id="firstStep" class="step-item">
+            <h3 class="step-name">Krok 1.</h3>
+            <p class="step-description">
+              Wypełnij pole z datą złożenia wniosku. Należy wpisać datę w którą
+              wniosek został złożony.
+            </p>
+            <img
+              loading="lazy"
+              id="scrollToOpen"
+              src="../../../images/applications-images/caregiving-leave-1.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 2.</h3>
+            <p class="step-description">
+              Wpisz swoje imię i nazwisko czytelnie - łacińskimi literami w
+              odpowiednim polu zaznaczonym na ilustracji.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-2.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 3.</h3>
+            <p class="step-description">
+              Wpisz swój numer ID następnie wpisz nazwę działu.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-3.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 4.</h3>
+            <p class="step-description">
+              Zaznacz w odpowiednim polu przez jakiego pracodawcę obecnie
+              pracujesz.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-4.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 5.</h3>
+            <p class="step-description">
+              Wpisz datę od której będzie się zaczynać twój urlop opiekuńczy.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-5.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 6.</h3>
+            <p class="step-description">
+              Wpisz datę, kiedy skończy się twój urlop opiekuńczy. Należy wpisać
+              ostatni dzień, kiedy jeszcze będziesz przybywać na urlopie.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-6.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 7.</h3>
+            <p class="step-description">
+              Wpisz na ile dni roboczych łącznie wypisałeś/wypisałaś wniosek.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-7.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 8.</h3>
+            <p class="step-description">
+              Wpisz imię i nazwisko osoby, którą będziesz się opiekować.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-8.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 9.</h3>
+            <p class="step-description">
+              Zaznacz stopień pokrewieństwa – kim dla Ciebie jest osoba, którą
+              będziesz się opiekować.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-9.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 10.</h3>
+            <p class="step-description">
+              Wpisz adres osoby którą będziesz się opiekować – musi to być ten
+              sam adres pod którym mieszkasz.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-10.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 11.</h3>
+            <p class="step-description">
+              Podpisz wniosek w prawym dolnym rogu. Nie wymaga się podpisu
+              czytelnego.
+            </p>
+            <img
+              loading="lazy"
+              src="../../../images/applications-images/caregiving-leave-11.gif"
+              alt="caregiving-leave"
+              width="100%"
+              class="instruction-example-image"
+            />
+          </li>
+          <li class="step-item">
+            <h3 class="step-name">Krok 12.</h3>
+            <p class="step-description">
+              Zanieś wniosek do podpisania do swojego przełożonego.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <button class="up-button">
+        <svg class="up-arrow" width="30" height="30">
+          <use href="../../../images/svg-group.svg#icon-hide-arrow"></use>
+        </svg>
+      </button>
+    </main>
+    <script src="../../../js/lang.js"></script>
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>
