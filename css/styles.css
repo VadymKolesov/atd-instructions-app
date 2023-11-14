@@ -186,10 +186,11 @@ button {
 }
 
 .category-link {
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 31px;
+  font-size: 29px;
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.012em;

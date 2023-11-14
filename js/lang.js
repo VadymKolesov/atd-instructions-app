@@ -53,6 +53,18 @@ const lngArr = {
     en: "Bonus regulations",
     ru: "Регламент бонуса",
   },
+  "add-wr": {
+    pl: "Aneks do regulaminu pracy",
+    ua: "Додаток до Регламенту",
+    en: "Annex to work regulations",
+    ru: "Приложение к Регламенту",
+  },
+  "loyalty-bonus": {
+    pl: "Dodatek lojalnościowy",
+    ua: "Додаток за лояльність",
+    en: "Loyalty bonus",
+    ru: "Надбавка за лояльность",
+  },
   applications: {
     pl: "Wnioski",
     ua: "Заяви",
