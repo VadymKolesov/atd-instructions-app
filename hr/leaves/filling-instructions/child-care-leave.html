@@ -70,19 +70,21 @@
       </section>
       <section class="description-application">
         <div class="description-content">
-          <h2 class="description-title">Wniosek o opiekę nad dzieckiem</h2>
+          <h2 class="description-title" data-lang="childcare-leave">
+            Opieka nad dzieckiem
+          </h2>
           <div class="description-text">
-            <p>
+            <p data-lang="childcare-leave-desc-1">
               Każdy pracownik zatrudniony na umowę o pracę i opiekujący się
               dzieckiem do lat 14 może zawnioskować o urlop z tytułu opieki nad
-              dzieckiem
+              dzieckiem.
             </p>
-            <p>
+            <p data-lang="childcare-leave-desc-2">
               W ciągu roku przysługują dwa dni takiego urlopu obojgu rodzicom.
               Jeżeli jeden z rodziców dziecka już wykorzystał ten urlop u
               swojego pracodawcy, drugi nie może o niego wnioskować
             </p>
-            <p>
+            <p data-lang="childcare-leave-desc-3">
               Przysługujące pracownikowi 2 dni można również rozbić na godziny.
               Wówczas przysługuje 16h na rok.
             </p>
@@ -94,6 +96,7 @@
           id="instructionToggle"
           type="button"
           class="instruction-toggle-button"
+          data-lang="instruction-button"
         >
           Instrukcja
           <svg
@@ -110,8 +113,8 @@
       <section id="dropdownInstruction" class="instruction-application">
         <ul class="instruction-steps list">
           <li id="firstStep" class="step-item">
-            <h3 class="step-name">Krok 1.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-1">Krok 1.</h3>
+            <p class="step-description" data-lang="leave-step-date">
               Wypełnij pole z datą złożenia wniosku. Należy wpisać datę w którą
               wniosek został złożony.
             </p>
@@ -125,8 +128,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 2.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-2">Krok 2.</h3>
+            <p class="step-description" data-lang="leave-step-name">
               Wpisz swoje imię i nazwisko czytelnie - łacińskimi literami w
               odpowiednim polu zaznaczonym na ilustracji.
             </p>
@@ -139,8 +142,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 3.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-3">Krok 3.</h3>
+            <p class="step-description" data-lang="leave-step-id">
               Wpisz swój numer ID następnie wpisz nazwę działu.
             </p>
             <img
@@ -152,8 +155,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 4.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-4">Krok 4.</h3>
+            <p class="step-description" data-lang="leave-step-employer">
               Zaznacz w odpowiednim polu przez jakiego pracodawcę obecnie
               pracujesz.
             </p>
@@ -166,8 +169,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 5.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-5">Krok 5.</h3>
+            <p class="step-description" data-lang="childcare-leave-step-type">
               Zaznacz w odpowiednim polu jaki typ urlopu Ciebie interesuje. W
               tym przypadku zaznacz “Z tytułu opieki nad dzieckiem”.
             </p>
@@ -180,8 +183,13 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 6.</h3>
-            <p class="step-description">Wpisz datę urodzenia dziecka.</p>
+            <h3 class="step-name" data-lang="step-6">Krok 6.</h3>
+            <p
+              class="step-description"
+              data-lang="childcare-leave-step-birthday"
+            >
+              Wpisz datę urodzenia dziecka.
+            </p>
             <img
               loading="lazy"
               src="../../../images/applications-images/child-care-leave-6.gif"
@@ -191,10 +199,9 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 7.</h3>
-            <p class="step-description">
-              Wpisz datę od której będzie się zaczynać twój urlop z tytułu
-              opieki nad dzieckiem.
+            <h3 class="step-name" data-lang="step-7">Krok 7.</h3>
+            <p class="step-description" data-lang="leave-step-date-from">
+              Wpisz datę od której będzie się zaczynać twój urlop.
             </p>
             <img
               loading="lazy"
@@ -205,8 +212,11 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 8.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-8">Krok 8.</h3>
+            <p
+              class="step-description"
+              data-lang="childcare-leave-step-date-to"
+            >
               Wpisz datę, kiedy skończy się twój urlop z tytułu opieki nad
               dzieckiem. Należy wpisać ostatni dzień, kiedy jeszcze będziesz
               przybywać na urlopie. Jeżeli wybrałeś opcję rozbicia tego urlopu
@@ -221,9 +231,9 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 9.</h3>
-            <p class="step-description">
-              Wpisz ilość dni roboczych 1 lub 2 (lub ilość godzin). Nie wliczaj
+            <h3 class="step-name" data-lang="step-9">Krok 9.</h3>
+            <p class="step-description" data-lang="childcare-leave-step-days">
+              Wpisz ilość dni roboczych: 1 lub 2 (lub ilość godzin). Nie wliczaj
               dni wolnych od pracy.
             </p>
             <img
@@ -235,8 +245,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 10.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-10">Krok 10.</h3>
+            <p class="step-description" data-lang="leave-step-signature">
               Podpisz wniosek w prawym dolnym rogu. Nie wymaga się podpisu
               czytelnego.
             </p>
@@ -249,8 +259,8 @@
             />
           </li>
           <li class="step-item">
-            <h3 class="step-name">Krok 11.</h3>
-            <p class="step-description">
+            <h3 class="step-name" data-lang="step-11">Krok 11.</h3>
+            <p class="step-description" data-lang="leave-step-manager">
               Zanieś wniosek do podpisania do swojego przełożonego.
             </p>
           </li>
