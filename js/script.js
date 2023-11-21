@@ -15,6 +15,12 @@
 const selectLang = document.querySelector(".language-choose");
 const allLang = ["pl", "ua", "en", "ru"];
 
+const checkLang = (el) => el === localStorage.getItem("language");
+
+if (!allLang.some(checkLang)) {
+  localStorage.setItem("language", "pl");
+}
+
 selectLang.addEventListener("change", saveLanguage);
 
 function saveLanguage() {
