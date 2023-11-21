@@ -1,34 +1,20 @@
 const faqList = document.querySelector(".faq-list");
 const newItem = document.createElement("li");
 const newParagraph = document.createElement("p");
-const allquestions = [];
-function addNew() {
-  faqList.appendChild(newItem);
-}
-
-// for (key in faqQuestions) {
-//   // console.log(key);
-//   // console.log(faqQuestions[key]);
-//   allquestions.push(key);
-// }
-
-// for (item of allquestions) {
-//   console.log(item);
-//   faqList.innerHTML = item;
-// }
+let sourceHash = localStorage.getItem("language");
 
 function addQuestion(source) {
   return source
     .map(
       (source) => `<li>
             <div class="faq-item">
-              <p class="question-text">${source.item.question}</p>
+              <p class="question-text">${source.item.question[sourceHash]}</p>
               <svg class="toggle-arrow-icon faq-arrow" width="28" height="28">
                 <use href="../images/svg-group.svg#icon-hide-arrow">
                 </use>
               </svg>
             </div>
-            <p class="faq-answer-item">${source.item.answer}</p>
+            <p class="faq-answer-item">${source.item.answer[sourceHash]}</p>
           </li>`
     )
     .join(` `);
@@ -40,11 +26,33 @@ faqList.innerHTML = questions;
 const faqToggle = document.querySelector(".faq-item");
 const faqArrow = document.querySelector(".faq-arrow");
 const faqAnswerItem = document.querySelector(".faq-answer-item");
+const faqAnswerItemAll = document.querySelectorAll(".faq-answer-item");
+
+let arr = {};
+
+for (item of faqAnswerItemAll) {
+  const keyName = item.textContent;
+  const keyValue = window.getComputedStyle(item, null).height;
+  arr[keyName] = keyValue;
+  item.style.height = 0;
+}
 
 const openFaqItem = (event) => {
   let target = event.target;
-  target.nextElementSibling.classList.toggle("answer-show");
-  target.lastElementChild.classList.toggle("rotate-instruction-arrow");
+  const answerItem = target.nextElementSibling;
+  const targetItemKey = target.nextElementSibling.textContent;
+  const targetItemHeight = arr[targetItemKey];
+  const toggleArrow = target.lastElementChild;
+
+  if (target.tagName === "DIV" && answerItem.style.height === "0px") {
+    answerItem.style.height = targetItemHeight;
+    answerItem.style.padding = "20px 25px 3px 25px";
+    toggleArrow.classList.add("rotate-instruction-arrow");
+  } else {
+    answerItem.style.height = "0px";
+    answerItem.style.padding = "0 25px";
+    toggleArrow.classList.remove("rotate-instruction-arrow");
+  }
 };
 
 faqList.addEventListener("click", openFaqItem);

@@ -79,7 +79,7 @@ if (upButton) {
   };
 
   function scrollFunction() {
-    if (document.documentElement.scrollTop > 1500) {
+    if (document.documentElement.scrollTop > 1000) {
       upButton.style.display = "block";
     } else {
       upButton.style.display = "none";

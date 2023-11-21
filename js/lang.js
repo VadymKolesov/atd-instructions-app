@@ -49,9 +49,9 @@ const lngArr = {
   },
   "bon-reg": {
     pl: "Regulamin premii",
-    ua: "Регламент бонусу",
+    ua: "Регламент премії",
     en: "Bonus regulations",
-    ru: "Регламент бонуса",
+    ru: "Регламент премии",
   },
   "add-wr": {
     pl: "Aneks do regulaminu pracy",
@@ -196,6 +196,12 @@ const lngArr = {
     ua: "Зміна M26 Dark",
     en: "Shift M26 Dark",
     ru: "Смена M26 Dark",
+  },
+  "msg-shift-agency": {
+    pl: "Agencje",
+    ua: "Агенції",
+    en: "Agencies",
+    ru: "Агенции",
   },
   "annual-leave-desc-1": {
     pl: "Każdemu pracownikowi zatrudnionemu bezpośrednio przez AUTODOC Logistics należy się 26 dni urlopu wypoczynkowego, który nalicza się 1 stycznia każdego roku i przysługuje do 31 grudnia danego roku. Pracownikom agencyjnym nalicza się 2 dni urlopu wypoczynkowego każadego kolejnego miesiąca od daty zatrudnienia wskazanej w umowie o prace.",
@@ -664,5 +670,29 @@ const lngArr = {
     ua: "Крок 12.",
     en: "Step 12.",
     ru: "Шаг 12.",
+  },
+  "lsj-contact": {
+    pl: "Magazyn M13: 13:00-15:00 w każdy Poniedziałek w stołówce.<br /> Biuro: ul. Celna 1, 70-644 Szczecin",
+    ua: "Склад M13: 13:00-15:00 щопонеділка в їдальні.<br /> Офіс: ul. Celna 1, 70-644 Szczecin",
+    en: "Warehouse M13: 13:00-15:00 every Monday in the canteen.<br /> Office: ul. Celna 1, 70-644 Szczecin",
+    ru: "Склад M13: 13:00-15:00 каждый понедельник в столовой.<br /> Офис: ul. Celna 1, 70-644 Szczecin",
+  },
+  "eurolink-contact": {
+    pl: "Magazyn M13: 13:00-14:30 w każdy Piątek w stołówce.<br /> Magazyn M10: 13:00-15:00 w każdą Środę przy biurku People Operations.<br /> Biuro: ul. Stoisława 3, 70-230 Szczecin",
+    ua: "Склад M13: 13:00-14:30 щоп'ятниці в їдальні.<br /> Склад M10: 13:00-15:00 щосереди при робочому місці People Operations.<br /> Офіс: ul. Stoisława 3, 70-230 Szczecin",
+    en: "Warehouse M13: 13:00-14:30 every Friday in the canteen.<br /> Warehouse M10: 13:00-15:00 every Wednesday at the People Operations workplace.<br /> Office: ul. Stoisława 3, 70-230 Szczecin",
+    ru: "Склад M13: 13:00-14:30 каждую пятницу в столовой.<br /> Склад M10: 13:00-15:00 каждую среду на рабочем месте People Operations.<br /> Офис: ul. Stoisława 3, 70-230 Szczecin",
+  },
+  "lsj-agency-name": {
+    pl: "Agencja LSJ",
+    ua: "Агенція LSJ",
+    en: "LSJ Agency",
+    ru: "Агентство LSJ",
+  },
+  "eurolink-agency-name": {
+    pl: "Agencja Eurolink",
+    ua: "Агенція Eurolink",
+    en: "Eurolink Agency",
+    ru: "Агентство Eurolink",
   },
 };
