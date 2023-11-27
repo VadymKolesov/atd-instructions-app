@@ -1,14 +1,14 @@
 {
   "name": "Autodoc.help",
   "short_name": "atd-help",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#F4F4F4",
   "theme_color": "#F4F4F4",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/logo-144x144.png",
+      "src": "./images/logo-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     }
