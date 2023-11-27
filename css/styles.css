@@ -726,3 +726,23 @@ button {
 }
 
 /* ----- FAQ ----- */
+
+/** ----- BUS-SCHEDULE ----- */
+
+.schedule-item {
+  width: 100%;
+  background-color: var(--nightmare-light);
+  border-radius: 15px;
+}
+
+.way-name {
+  color: var(--white);
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  text-transform: uppercase;
+}
+
+/** ----- BUS-SCHEDULE ----- */
