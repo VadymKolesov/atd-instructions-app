@@ -10,7 +10,7 @@
   <body class="body">
     <header class="header container">
       <nav class="navigate">
-        <a href="../index.html" class="btn-back link">
+        <a href="./bus-schedule.html" class="btn-back link">
           <svg class="back-icon" width="33" height="33">
             <use href="../images/svg-group.svg#icon-back"></use>
           </svg>
@@ -66,9 +66,9 @@
           Centrum informacji dla pracowników AUTODOC
         </p>
       </section>
-      <section class="section-faq">
-        <input class="faq-search" type="text" placeholder="Wyszukaj" />
-        <ul class="faq-list list"></ul>
+      <section class="section-bus-schedule">
+        <h2 id="goleniow" class="schedule-title">Trasa Goleniów</h2>
+        <ul id="twoShifts" class="schedule-shift-list list"></ul>
       </section>
       <button class="up-button">
         <svg class="up-arrow" width="30" height="30">
@@ -76,11 +76,8 @@
         </svg>
       </button>
     </main>
-    <footer class="footer container">
-      <p class="assist-message">FAQ</p>
-    </footer>
-    <script src="../js/faq.js"></script>
-    <script src="../js/faq-script.js"></script>
+    <script src="../js/bus-schedule-source.js"></script>
+    <script src="../js/bus-schedule-script.js"></script>
     <script src="../js/lang.js"></script>
     <script src="../js/script.js"></script>
   </body>

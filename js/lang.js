@@ -35,11 +35,23 @@ const lngArr = {
     en: "Regulations",
     ru: "Акты",
   },
+  "bus-schedule-category": {
+    pl: "Grafik autobusów",
+    ua: "Розклад автобусів",
+    en: "Bus schedules",
+    ru: "Расписание автобусов",
+  },
   "assist-msg-index": {
     pl: "Wybierz kategorię",
     ua: "Оберіть категорію",
     en: "Choose a category",
     ru: "Выберите категорию",
+  },
+  "assist-msg-line": {
+    pl: "Wybierz trasę",
+    ua: "Оберіть маршрут",
+    en: "Choose a route",
+    ru: "Выберите маршрут",
   },
   "work-reg": {
     pl: "Regulamin pracy",

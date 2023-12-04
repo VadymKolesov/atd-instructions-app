@@ -20,7 +20,7 @@ function addQuestion(source) {
     .join(` `);
 }
 
-const questions = addQuestion(faqQuestions);
+let questions = addQuestion(faqQuestions);
 faqList.innerHTML = questions;
 
 const faqToggle = document.querySelector(".faq-item");
@@ -29,13 +29,15 @@ const faqAnswerItem = document.querySelector(".faq-answer-item");
 const faqAnswerItemAll = document.querySelectorAll(".faq-answer-item");
 
 let arr = {};
-
-for (item of faqAnswerItemAll) {
-  const keyName = item.textContent;
-  const keyValue = window.getComputedStyle(item, null).height;
-  arr[keyName] = keyValue;
-  item.style.height = 0;
+function hideAnswer(answers) {
+  for (item of answers) {
+    const keyName = item.textContent;
+    const keyValue = window.getComputedStyle(item, null).height;
+    arr[keyName] = keyValue;
+    item.style.height = 0;
+  }
 }
+hideAnswer(faqAnswerItemAll);
 
 const openFaqItem = (event) => {
   let target = event.target;
@@ -48,7 +50,7 @@ const openFaqItem = (event) => {
     answerItem.style.height = targetItemHeight;
     answerItem.style.padding = "20px 25px 3px 25px";
     toggleArrow.classList.add("rotate-instruction-arrow");
-  } else {
+  } else if (target.tagName === "DIV" && answerItem.style.height !== "0px") {
     answerItem.style.height = "0px";
     answerItem.style.padding = "0 25px";
     toggleArrow.classList.remove("rotate-instruction-arrow");
@@ -56,3 +58,23 @@ const openFaqItem = (event) => {
 };
 
 faqList.addEventListener("click", openFaqItem);
+
+const faqSearchInput = document.querySelector(".faq-search");
+
+faqSearchInput.addEventListener("input", filterMarkup);
+
+function filterMarkup(e) {
+  const filter = e.target.value.toLowerCase();
+  const filteredItems = faqQuestions.filter((t) => {
+    if (
+      t.item.question[sourceHash].toLowerCase().includes(filter) ||
+      t.item.answer[sourceHash].toLowerCase().includes(filter)
+    ) {
+      return t;
+    }
+  });
+  console.log(filteredItems);
+  const filteredQuestion = addQuestion(filteredItems);
+  faqList.innerHTML = filteredQuestion;
+  hideAnswer(document.querySelectorAll(".faq-answer-item"));
+}

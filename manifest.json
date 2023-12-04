@@ -1,6 +1,6 @@
 {
   "name": "Autodoc.help",
-  "short_name": "atd-help",
+  "short_name": "Autodoc.help",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#132530",
