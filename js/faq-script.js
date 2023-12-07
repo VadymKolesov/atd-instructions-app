@@ -73,7 +73,6 @@ function filterMarkup(e) {
       return t;
     }
   });
-  console.log(filteredItems);
   const filteredQuestion = addQuestion(filteredItems);
   faqList.innerHTML = filteredQuestion;
   hideAnswer(document.querySelectorAll(".faq-answer-item"));

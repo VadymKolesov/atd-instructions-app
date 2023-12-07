@@ -696,7 +696,7 @@ button {
   background-position: right 20px bottom 50%;
   background-size: 23px;
   outline: none;
-  transition: all 150ms ease-in;
+  transition: border 500ms ease;
 }
 
 .faq-search:focus {
@@ -916,3 +916,216 @@ button {
 }
 
 /** ----- BUS-SCHEDULE ----- */
+
+/*TODO ----- SCHEDULE-ID ----- */
+
+.schedule {
+  margin-top: 145px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  transition: margin-top 500ms ease;
+}
+
+.id-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.id-title {
+  height: 100%;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+}
+
+.id-form {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.label-id {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 50%;
+  left: 29px;
+  transform: translateY(-50%);
+}
+
+.inputd-id {
+  width: 214px;
+  height: 53px;
+  border-radius: 15px;
+  outline: none;
+  border: transparent;
+  background-color: var(--nightmare-light);
+  color: var(--smoke-gray);
+  font-size: 18px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  padding: 0 29px 0 76px;
+}
+
+.inputd-id:focus {
+  border: 1px solid #71787b;
+  transition: border 500ms ease;
+}
+
+.submit-id-btn {
+  display: block;
+  background-color: var(--juce-orange);
+  border: none;
+  border-radius: 15px;
+  width: 65px;
+  height: 53px;
+}
+
+.id-search-icon {
+  fill: transparent;
+  stroke: var(--white);
+  transform: scaleX(-1);
+}
+
+.info-calendar-id {
+  width: 100%;
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+}
+
+.info-calendar-id td {
+  padding: 12px 0 12px 0;
+
+  text-align: center;
+  border-spacing: 2px;
+}
+
+.shift-grou-id td:first-child {
+  padding: 0;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: var(--juce-orange);
+}
+
+.shift-grou-id td:last-child {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--nightmare);
+  background-color: var(--white);
+}
+
+.days-of-week-id td {
+  width: calc((580px - 8px) / 7);
+  background-color: var(--nightmare-light);
+}
+
+.schedule-list {
+  margin-top: 15px;
+  width: 100%;
+  border-spacing: 2px;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+}
+
+.schedule-list td {
+  text-align: center;
+  padding: 12px 0 12px 0;
+  width: calc((580px - 8px) / 7);
+  color: var(--nightmare);
+  background-color: var(--white);
+}
+
+.schedule-list td p {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+}
+
+.schedule-list .days-behind {
+  color: var(--white);
+  background-color: var(--nightmare-light);
+}
+
+.schedule-list .day-off {
+  color: var(--white);
+  background-color: var(--juce-orange);
+}
+
+.calendar-error {
+  color: rgb(132, 153, 161);
+  font-size: 18px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  text-align: center;
+  background-color: var(--nightmare-light);
+  padding: 20px 0;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.calendar-id-animate {
+  animation: animateSearch 700ms ease forwards;
+}
+
+.calendar-id {
+  width: 100%;
+  margin-top: 200px;
+  opacity: 0;
+}
+
+.calendar-animate {
+  animation: animateCalendar 900ms ease 200ms forwards;
+}
+
+.id-title-animation {
+  opacity: 0;
+  transition: opacity 100ms ease 165ms;
+}
+
+@keyframes animateSearch {
+  0% {
+    margin-top: 145px;
+  }
+  30% {
+    margin-top: 175px;
+  }
+  65% {
+    margin-top: -150px;
+  }
+  100% {
+    margin-top: -100px;
+  }
+}
+
+@keyframes animateCalendar {
+  0% {
+    margin-top: 200px;
+  }
+  30% {
+    margin-top: 20px;
+    opacity: 1;
+  }
+  75% {
+    margin-top: 50px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: 50px;
+    opacity: 1;
+  }
+}
+
+/*TODO ----- SCHEDULE-ID ----- */

@@ -35,6 +35,18 @@ const lngArr = {
     en: "Regulations",
     ru: "Акты",
   },
+  schedules: {
+    pl: "Grafiki",
+    ua: "Графіки",
+    en: "Schedules",
+    ru: "Графики",
+  },
+  "schedule-employees": {
+    pl: "Grafik pracy",
+    ua: "Графік роботи",
+    en: "Work schedule",
+    ru: "График работы",
+  },
   "bus-schedule-category": {
     pl: "Grafik autobusów",
     ua: "Розклад автобусів",
@@ -214,6 +226,12 @@ const lngArr = {
     ua: "Агенції",
     en: "Agencies",
     ru: "Агенции",
+  },
+  "employees-schedule": {
+    pl: "Grafik M13 - Grudzień",
+    ua: "Графік М13 - Грудень",
+    en: "Schedule M13 - December",
+    ru: "График M13 - Декабрь",
   },
   "annual-leave-desc-1": {
     pl: "Każdemu pracownikowi zatrudnionemu bezpośrednio przez AUTODOC Logistics należy się 26 dni urlopu wypoczynkowego, który nalicza się 1 stycznia każdego roku i przysługuje do 31 grudnia danego roku. Pracownikom agencyjnym nalicza się 2 dni urlopu wypoczynkowego każadego kolejnego miesiąca od daty zatrudnienia wskazanej w umowie o prace.",
@@ -706,5 +724,71 @@ const lngArr = {
     ua: "Агенція Eurolink",
     en: "Eurolink Agency",
     ru: "Агентство Eurolink",
+  },
+  mon: {
+    pl: "Pon",
+    ua: "Пн",
+    en: "Mon",
+    ru: "Пн",
+  },
+  tue: {
+    pl: "Wt",
+    ua: "Вт",
+    en: "Tue",
+    ru: "Вт",
+  },
+  wed: {
+    pl: "Śr",
+    ua: "Ср",
+    en: "Wed",
+    ru: "Ср",
+  },
+  thur: {
+    pl: "Czw",
+    ua: "Чт",
+    en: "Thur",
+    ru: "Чт",
+  },
+  fri: {
+    pl: "Pt",
+    ua: "Пт",
+    en: "Fri",
+    ru: "Пт",
+  },
+  sat: {
+    pl: "So",
+    ua: "Сб",
+    en: "Sat",
+    ru: "Сб",
+  },
+  sun: {
+    pl: "Nie",
+    ua: "Нд",
+    en: "Sun",
+    ru: "Вс",
+  },
+  doff: {
+    pl: "Wolne",
+    ua: "Вихідний",
+    en: "Day off",
+    ru: "Выходной",
+  },
+  "id-title": {
+    pl: "Wpisz swój numer ID:",
+    ua: "Введіть свій номер ID:",
+    en: "Enter your ID number:",
+    ru: "Введите свой номер ID:",
+  },
+  "calendar-no-value-message": {
+    pl: "Wprowadź swój numer ID :)",
+    ua: "Будь ласка, введіть свій номер ID :)",
+    en: "Please enter your ID number :)",
+    ru: "Пожалуйста, введите свой номер ID :)",
+  },
+  "calendar-error-message": {
+    pl: "Niestety, nie znaleziono takiego pracownika :(",
+    ua: "Вибачте, такого співробітника не знайдено :(",
+    en: "Sorry, no such employee was found :(",
+    ru: "Извините, такого сотрудника не найдено :(",
   },
 };
