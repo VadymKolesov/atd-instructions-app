@@ -139,7 +139,7 @@ const lngArr = {
   },
   "leave-requests": {
     pl: "Wnioski o urlop",
-    ua: "Заяви про відпустку",
+    ua: "Заяви на відпустку",
     en: "Vacation requests",
     ru: "Заявления на отпуск",
   },

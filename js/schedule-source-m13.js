@@ -619,6 +619,7 @@ const scheduleListSource = {
       { date: "8", state: "14:00-22:00" },
       { date: "9", state: "14:00-22:00" },
       { date: "10", state: "Wolne" },
+      { date: "11", state: "6:00-14:00" },
       { date: "12", state: "6:00-14:00" },
       { date: "13", state: "6:00-14:00" },
       { date: "14", state: "6:00-14:00" },
