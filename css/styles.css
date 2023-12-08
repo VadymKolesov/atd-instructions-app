@@ -1132,6 +1132,8 @@ button {
 
 /*TODO ----- SCHEDULE-ID ----- */
 
+/*! ----- CLUE ----- */
+
 .lng-clue {
   background-color: var(--juce-orange);
   color: var(--white);
@@ -1141,11 +1143,10 @@ button {
   width: 0;
   padding: 0;
   height: 91px;
-  /* padding: 16px 35px; */
   border-radius: 15px;
   position: absolute;
   top: 83px;
-  right: 28%;
+  right: 29%;
   transform: translateY(-28%);
   opacity: 1;
   transition: all 500ms ease;
@@ -1202,3 +1203,5 @@ button {
   align-items: center;
   width: 200px;
 }
+
+/*! ----- CLUE ----- */
