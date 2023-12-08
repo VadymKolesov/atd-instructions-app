@@ -102,3 +102,40 @@ if (upButton) {
     document.documentElement.scrollTop = 0;
   }
 }
+
+if (document.querySelector(".lng-clue")) {
+  const lngClue = document.querySelector(".lng-clue");
+  const lngClueContent = document.querySelector(".lng-clue-content");
+
+  function showLngClue() {
+    lngClue.classList.add("lng-clue-show");
+    setTimeout(() => {
+      lngClueContent.classList.add("lng-clue-content-show");
+    }, 300);
+  }
+
+  function hideLngClue() {
+    lngClueContent.classList.remove("lng-clue-content-show");
+
+    setTimeout(() => {
+      lngClue.classList.remove("lng-clue-show");
+    }, 200);
+  }
+
+  setTimeout(() => {
+    showLngClue();
+    setTimeout(() => {
+      hideLngClue();
+    }, 10000);
+  }, 500);
+}
+
+if (document.querySelector(".reg-clue")) {
+  const regClue = document.querySelector(".reg-clue");
+
+  function showRegClue() {
+    regClue.classList.add("reg-clue-show");
+  }
+
+  showRegClue();
+}
