@@ -52,6 +52,10 @@ if (instructionToggleButton) {
     const instructionItem = document.getElementById("dropdownInstruction");
     instructionItem.classList.toggle("instruction-show");
     instructionArrow.classList.toggle("rotate-instruction-arrow");
+    window.scrollBy(0, 1000);
+    if (!document.querySelector(".rotate-instruction-arrow")) {
+      document.documentElement.scrollTop = 0;
+    }
   };
 }
 

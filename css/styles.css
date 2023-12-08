@@ -474,12 +474,14 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--smoke-gray);
+  color: var(--white);
   font-size: 20px;
   line-height: 1.85;
   letter-spacing: -0.02em;
-  fill: var(--smoke-gray);
-  background-color: transparent;
+  fill: var(--white);
+  background-color: var(--juce-orange);
+  padding: 8px 25px 8px 35px;
+  border-radius: 15px;
   border: none;
 }
 
