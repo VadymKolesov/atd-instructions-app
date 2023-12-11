@@ -120,6 +120,9 @@ if (document.querySelector(".lng-clue")) {
     setTimeout(() => {
       lngClue.classList.remove("lng-clue-show");
     }, 200);
+    setTimeout(() => {
+      lngClue.remove();
+    }, 600);
   }
 
   setTimeout(() => {
@@ -138,4 +141,101 @@ if (document.querySelector(".reg-clue")) {
   }
 
   showRegClue();
+}
+
+if (document.querySelector(".quest-input")) {
+  const input = document.querySelector(".quest-input");
+  const placeholderLng = localStorage.getItem("language");
+  input.placeholder = lngArr.qfp[placeholderLng];
+  const button = document.querySelector(".quest-button");
+  const closeQuestionFormBtn = document.querySelector(".close-quest-button");
+  const qForm = document.querySelector(".question-form");
+  const openQuestionFormBtn = document.querySelector(".open-form-btn");
+  const questionForm = document.querySelector(".backdrop-modal");
+  const doneMessage = `<div class="quest-done-message">
+  <p class="done-text"></p>
+  <svg class="done-icon" width="60" height="60">
+    <use href="./images/svg-group.svg#icon-done"></use>
+  </svg>
+</div>`;
+
+  openQuestionFormBtn.addEventListener("click", openQuestionForm);
+
+  function openQuestionForm(e) {
+    questionForm.classList.remove("form-hidden");
+    document.body.classList.add("no-scroll");
+    openQuestionFormBtn.style.animation =
+      "openFormBtnActive 300ms ease forwards";
+    qForm.style.animation = "questOpenFormAnimation 500ms ease forwards";
+  }
+
+  questionForm.addEventListener("click", clsQuestionForm);
+
+  function clsQuestionForm(e) {
+    if (e.target === questionForm || e.target === closeQuestionFormBtn) {
+      setTimeout(() => {
+        questionForm.classList.add("form-hidden");
+        document.body.classList.remove("no-scroll");
+        input.value = "";
+        input.style.border = "transparent";
+      }, 350);
+
+      openQuestionFormBtn.style.animation = "openFormBtn 5s ease infinite";
+      qForm.style.animation = "questCloseFormAnimation 400ms ease forwards";
+    }
+  }
+  button.addEventListener("click", sendPostRequest);
+  function sendPostRequest() {
+    const message = input.value;
+    const url =
+      "https://script.google.com/macros/s/AKfycbxEyClRPf_GA-8EWv7obFy51IQCC6ifePMDX2ZhvTUsbCdF25SxxGYOZxEtlSkyYQ_D/exec";
+
+    const data = { question: message };
+
+    const options = {
+      redirect: "follow",
+      method: "POST",
+      "Access-Control-Allow-Origin": "*",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify(data),
+    };
+    if (!input.value) {
+      console.log("Wpisz");
+      input.style.border = "1px solid red";
+    } else {
+      fetch(url, options)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(() => {
+          console.log("POST request send!");
+        })
+        .catch((error) => {
+          console.error("Error to fetch POST request:", error);
+        });
+      qForm.style.animation = "questCloseFormAnimation 400ms ease forwards";
+      setTimeout(() => {
+        questionForm.classList.add("form-hidden");
+        document.body.classList.remove("no-scroll");
+        input.value = "";
+        input.style.border = "transparent";
+      }, 350);
+      openQuestionFormBtn.insertAdjacentHTML("afterend", doneMessage);
+
+      setTimeout(() => {
+        document.querySelector(".done-text").textContent =
+          lngArr.qdm[placeholderLng];
+      }, 200);
+      setTimeout(() => {
+        document.querySelector(".done-text").textContent = "";
+        document.querySelector(".quest-done-message").remove();
+        openQuestionFormBtn.style.animation = "openFormBtn 5s ease infinite";
+      }, 2650);
+    }
+  }
 }

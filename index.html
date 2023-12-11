@@ -121,11 +121,45 @@
           </li>
         </ul>
       </section>
-      <div class="lng-clue">
-        <div class="lng-clue-content">
-          Wybierz język, w którym czujesz się komfortowo :)
+      <section>
+        <div class="lng-clue">
+          <p class="lng-clue-content">
+            Wybierz język, w którym czujesz się komfortowo :)
+          </p>
         </div>
-      </div>
+        <div class="open-form-btn">
+          <svg class="chat-icon" width="50" height="50">
+            <use href="./images/svg-group.svg#icon-chat"></use>
+          </svg>
+        </div>
+        <div class="backdrop-modal form-hidden">
+          <form class="question-form">
+            <p class="quest-message-hi" data-lang="qm-hi">Cześć!</p>
+            <p data-lang="qm-content">
+              jekjbehbd edjbelkjd ejdejkd dejkdhej dejdhekjd jekjbehbd edjbelkjd
+              ejdejkd dejkdhej dejdhekjd jekjbehbd edjbelkjd ejdejkd dejkdhej
+              dejdhekjd jekjbehbd edjbelkjd ejdejkd dejkdhej dejdhekjd dejde
+              dejdjed edjedke
+            </p>
+            <textarea
+              class="quest-input"
+              placeholder="Chcemy Cię usłyszeć!"
+            ></textarea>
+            <div class="quest-btns">
+              <button
+                type="button"
+                class="close-quest-button"
+                data-lang="qm-close"
+              >
+                Anuluj
+              </button>
+              <button type="button" class="quest-button" data-lang="qm-send">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer container">
       <p class="assist-message" data-lang="assist-msg-index">

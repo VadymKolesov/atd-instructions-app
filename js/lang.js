@@ -791,4 +791,40 @@ const lngArr = {
     en: "Sorry, no such employee was found :(",
     ru: "Извините, такого сотрудника не найдено :(",
   },
+  qfp: {
+    pl: "Chcemy Cię usłyszeć!",
+    ua: "Ми хочемо тебе почути!",
+    en: "We want to hear you!",
+    ru: "Мы хотим тебя услышать!",
+  },
+  qdm: {
+    pl: "Dziękujemy!",
+    ua: "Дякуємо!",
+    en: "Thank you!",
+    ru: "Спасибо!",
+  },
+  "qm-hi": {
+    pl: "Cześć!",
+    ua: "Привіт!",
+    en: "Hi!",
+    ru: "Привет!",
+  },
+  "qm-content": {
+    pl: "Być może masz jakieś dodatkowe pytania? A może chciałbyś podzielić się z nami swoimi pomysłami? Prześlij je nam za pomocą tego formularza ;)",
+    ua: "Можливо, у тебе є додаткові питання? Або ти хочеш запропонувати нам свої ідеї? Відправ їх нам за цією формою ;)",
+    en: "Maybe you have additional questions? Or you want to offer us your ideas? Send them to us using this form ;)",
+    ru: "Может у тебя есть дополнительные вопросы? Или ты хочешь предложить нам свои идеи? Отправь их нам по этой форме ;)",
+  },
+  "qm-close": {
+    pl: "Anuluj",
+    ua: "Скасувати",
+    en: "Close",
+    ru: "Отмена",
+  },
+  "qm-send": {
+    pl: "Wyślij",
+    ua: "Надіслати",
+    en: "Send",
+    ru: "Отправить",
+  },
 };

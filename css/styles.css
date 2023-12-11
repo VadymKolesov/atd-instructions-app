@@ -1132,7 +1132,7 @@ button {
 
 /*TODO ----- SCHEDULE-ID ----- */
 
-/*! ----- CLUE ----- */
+/*! ----- CLUES ----- */
 
 .lng-clue {
   background-color: var(--juce-orange);
@@ -1157,6 +1157,7 @@ button {
 
 .lng-clue-show {
   width: 250px;
+  max-height: 100px;
   right: 32%;
   transition: all 500ms ease;
 }
@@ -1204,4 +1205,237 @@ button {
   width: 200px;
 }
 
-/*! ----- CLUE ----- */
+/*! ----- CLUES ----- */
+
+/** ----- QUESTION-FORM ----- */
+
+.backdrop-modal {
+  background-color: rgba(0, 0, 0, 0.352);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.question-form {
+  background-color: var(--white);
+  width: 500px;
+  /* min-height: 500px; */
+  border-radius: 15px;
+  padding: 25px;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  color: var(--nightmare);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes questOpenFormAnimation {
+  0% {
+    transform: translate(-50%, 70%);
+  }
+  30% {
+    transform: translate(-50%, 40%);
+  }
+  100% {
+    transform: translate(-50%, 50%);
+  }
+}
+
+@keyframes questCloseFormAnimation {
+  0% {
+    transform: translate(-50%, 50%);
+  }
+  70% {
+    transform: translate(-50%, 40%);
+  }
+  100% {
+    transform: translate(-50%, 150%);
+  }
+}
+
+.quest-message-hi {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.quest-input {
+  background-color: #dbdbdb;
+  border: transparent;
+  outline: none;
+  height: 200px;
+  border-radius: 15px;
+  resize: none;
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  color: var(--nightmare);
+  padding: 10px 20px;
+  margin-top: 30px;
+  transition: border 500ms ease;
+}
+
+.quest-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.close-quest-button {
+  background-color: var(--white);
+  outline: none;
+  border: 1px solid var(--nightmare-light);
+  color: var(--nightmare);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  padding: 10px;
+  border-radius: 15px;
+  width: calc((100% - 15px) / 2);
+}
+
+.quest-button {
+  background-color: var(--juce-orange);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  padding: 10px;
+  width: calc((100% - 15px) / 2);
+}
+
+.open-form-btn {
+  background-color: var(--juce-orange);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 70px;
+  right: 94px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: openFormBtn 5s ease infinite;
+}
+
+@keyframes openFormBtn {
+  0% {
+    transform: scaleX(-1);
+  }
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes openFormBtnActive {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.chat-icon {
+  fill: var(--white);
+}
+
+.done-icon {
+  fill: rgb(60, 177, 31);
+  animation: rotateDoneIconAnimation 3000ms ease forwards;
+}
+
+@keyframes rotateDoneIconAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  30% {
+    transform: rotate(0) scale(1);
+  }
+  65% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form-hidden {
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.quest-done-message {
+  width: 150px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--nightmare);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  animation: doneMessageAnimation 2750ms ease;
+}
+
+@keyframes doneMessageAnimation {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  15% {
+    width: 150px;
+    height: 150px;
+  }
+  85% {
+    width: 150px;
+    height: 150px;
+  }
+  90% {
+    width: 170px;
+    height: 170px;
+    opacity: 1;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+/** ----- QUESTION-FORM ----- */
