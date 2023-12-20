@@ -246,6 +246,7 @@ if (window.location.pathname !== "/index.html") {
   const timerMessage = document.createElement("p");
   const timer = document.createElement("p");
   const timerButton = document.createElement("button");
+  let metalink = document.createElement("meta");
 
   backdropTimer.classList.add("backdrop-modal");
   timerItem.classList.add("timer-item");
@@ -273,7 +274,13 @@ if (window.location.pathname !== "/index.html") {
     backdropTimer.remove();
   }
 
-  let activeTimeout = 240000;
+  function addMetaLink() {
+    metalink.setAttribute("http-equiv", "refresh");
+    metalink.setAttribute("content", "10;url=/index.html");
+    document.querySelector("head").appendChild(metalink);
+  }
+
+  let activeTimeout = 2000;
   let lastActive = new Date().getTime();
   let userIsActive = false;
 
@@ -300,15 +307,18 @@ if (window.location.pathname !== "/index.html") {
         }
       }, 1000);
 
-      timeOutRemoveActivity = setTimeout(() => {
-        userIsActive = false;
-        location.href = window.location.href.replace(
-          window.location.pathname,
-          "/index.html"
-        );
-      }, 10000);
+      // timeOutRemoveActivity = setTimeout(() => {
+      //   userIsActive = false;
+      //   location.href = window.location.href.replace(
+      //     window.location.pathname,
+      //     "/index.html"
+      //   );
+      // }, 10000);
+      addMetaLink();
     }
   }
+  console.log(location.href);
+  console.log(window.location);
 
   function removeIsActive() {
     if (userIsActive) {
