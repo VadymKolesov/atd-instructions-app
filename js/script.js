@@ -240,6 +240,13 @@ if (document.querySelector(".quest-input")) {
   }
 }
 
+if (
+  !localStorage.getItem("entryPath") &&
+  window.location.pathname.includes("index.html")
+) {
+  localStorage.setItem("entryPath", window.location.pathname);
+}
+
 if (window.location.pathname !== "/index.html") {
   const backdropTimer = document.createElement("div");
   const timerItem = document.createElement("div");
@@ -274,13 +281,7 @@ if (window.location.pathname !== "/index.html") {
     backdropTimer.remove();
   }
 
-  function addMetaLink() {
-    metalink.setAttribute("http-equiv", "refresh");
-    metalink.setAttribute("content", "10;url=/index.html");
-    document.querySelector("head").appendChild(metalink);
-  }
-
-  let activeTimeout = 2000;
+  let activeTimeout = 180000;
   let lastActive = new Date().getTime();
   let userIsActive = false;
 
@@ -292,10 +293,10 @@ if (window.location.pathname !== "/index.html") {
   let chekActivity;
   let timerClocking;
   let timeOutRemoveActivity;
+  let entryPath = localStorage.getItem("entryPath");
 
   function checkUserActivity() {
     if (new Date().getTime() - lastActive > activeTimeout) {
-      console.log("no active");
       removeIsActive();
       showActivityMessage();
       clearInterval(chekActivity);
@@ -307,18 +308,15 @@ if (window.location.pathname !== "/index.html") {
         }
       }, 1000);
 
-      // timeOutRemoveActivity = setTimeout(() => {
-      //   userIsActive = false;
-      //   location.href = window.location.href.replace(
-      //     window.location.pathname,
-      //     "/index.html"
-      //   );
-      // }, 10000);
-      addMetaLink();
+      timeOutRemoveActivity = setTimeout(() => {
+        userIsActive = false;
+        location.href = window.location.href.replace(
+          window.location.pathname,
+          entryPath
+        );
+      }, 10000);
     }
   }
-  console.log(location.href);
-  console.log(window.location);
 
   function removeIsActive() {
     if (userIsActive) {
