@@ -239,3 +239,92 @@ if (document.querySelector(".quest-input")) {
     }
   }
 }
+
+if (window.location.pathname !== "/index.html") {
+  const backdropTimer = document.createElement("div");
+  const timerItem = document.createElement("div");
+  const timerMessage = document.createElement("p");
+  const timer = document.createElement("p");
+  const timerButton = document.createElement("button");
+
+  backdropTimer.classList.add("backdrop-modal");
+  timerItem.classList.add("timer-item");
+  timer.classList.add("timer");
+  timerButton.classList.add("timer-btn");
+
+  timerMessage.textContent =
+    lngArr["timer-msg"][localStorage.getItem("language")];
+  timer.textContent = 10;
+  timerButton.textContent =
+    lngArr["timer-btn"][localStorage.getItem("language")];
+  timerButton.setAttribute("type", "submit");
+
+  function showActivityMessage() {
+    document.querySelector("body").appendChild(backdropTimer);
+    backdropTimer.appendChild(timerItem);
+    timerItem.appendChild(timerMessage);
+    timerItem.appendChild(timer);
+    timerItem.appendChild(timerButton);
+
+    timerButton.addEventListener("click", hideActivityMessage);
+  }
+
+  function hideActivityMessage() {
+    backdropTimer.remove();
+  }
+
+  let activeTimeout = 240000;
+  let lastActive = new Date().getTime();
+  let userIsActive = false;
+
+  window.addEventListener("load", setIsActive);
+  window.addEventListener("scroll", setIsActive);
+  window.addEventListener("keypress", setIsActive);
+  window.addEventListener("click", setIsActive);
+
+  let chekActivity;
+  let timerClocking;
+  let timeOutRemoveActivity;
+
+  function checkUserActivity() {
+    if (new Date().getTime() - lastActive > activeTimeout) {
+      console.log("no active");
+      removeIsActive();
+      showActivityMessage();
+      clearInterval(chekActivity);
+      timerClocking = setInterval(() => {
+        timer.textContent -= 1;
+        if (timer.textContent < 0) {
+          clearInterval(timerClocking);
+          timer.textContent = 10;
+        }
+      }, 1000);
+
+      timeOutRemoveActivity = setTimeout(() => {
+        userIsActive = false;
+        location.href = window.location.href.replace(
+          window.location.pathname,
+          "/index.html"
+        );
+      }, 10000);
+    }
+  }
+
+  function removeIsActive() {
+    if (userIsActive) {
+      userIsActive = false;
+    }
+  }
+
+  function setIsActive() {
+    lastActive = new Date().getTime();
+    if (!userIsActive) {
+      clearInterval(timerClocking);
+      clearTimeout(timeOutRemoveActivity);
+      timer.textContent = 10;
+      userIsActive = true;
+      chekActivity = setInterval(checkUserActivity, 1000);
+      hideActivityMessage();
+    }
+  }
+}
