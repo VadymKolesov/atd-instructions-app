@@ -1211,7 +1211,7 @@ button {
 
 .backdrop-modal {
   background-color: rgba(0, 0, 0, 0.352);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -1221,7 +1221,6 @@ button {
 .question-form {
   background-color: var(--white);
   width: 500px;
-  /* min-height: 500px; */
   border-radius: 15px;
   padding: 25px;
   position: fixed;
@@ -1266,7 +1265,7 @@ button {
 }
 
 .quest-input {
-  background-color: #EDEEEE;
+  background-color: #dbdbdb;
   border: transparent;
   outline: none;
   height: 200px;
@@ -1439,3 +1438,89 @@ button {
 }
 
 /** ----- QUESTION-FORM ----- */
+
+/*TODO ----- ABOUT-SECTION ----- */
+
+.section-about {
+  width: 100%;
+}
+
+.about-title {
+  color: var(--white);
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+}
+
+.about-title span {
+  color: var(--juce-orange);
+}
+
+.about-version {
+  margin-top: 10px;
+  color: var(--smoke-gray);
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.about-content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-content-item {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/*TODO ----- ABOUT-SECTION ----- */
+
+/* ----- ACTIVITY-TIMER ----- */
+
+.timer-item {
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 45%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--nightmare);
+}
+
+.timer {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.timer-btn {
+  background-color: var(--juce-orange);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.85;
+  letter-spacing: -0.02em;
+  padding: 10px;
+  width: 75%;
+}
+
+/* ----- ACTIVITY-TIMER ----- */

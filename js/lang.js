@@ -426,7 +426,7 @@ const lngArr = {
     ru: "Часы отсутствия снимаются с вашей первой сверхурочной смены в текущем месяце.",
   },
   "private-leave-step-date": {
-    pl: "Wpisz datę – w jaki dzień wnioskujesz o wyjście prywatne.",
+    pl: "Wpisz datę - w jaki dzień wnioskujesz o wyjście prywatne.",
     ua: "Напишіть дату — в який день ви хочете отримати відгул за особистими обставинами.",
     en: "Write the date - what day you are requesting private leave.",
     ru: "Укажите дату, когда вы хотите получить отгул по личным обстоятельствам.",
@@ -450,7 +450,7 @@ const lngArr = {
     ru: "Это заявление подается, если в ходе вашей работы вы должны покинуть свое рабочее место и уйти со склада, в связи с непревиденными обстоятельствами.",
   },
   "force-leave-desc-2": {
-    pl: "Każdy pracownik zatrudniony na umowę o pracę może wykorzystać w roku kalendarzowym wymiar 2 dni. Można również rozbić te dni na godziny – wówczas przysługuje 16h. Wniosek o udzielenie wolnego z powodu działania siły wyższej wypisujemy na pełne godziny.",
+    pl: "Każdy pracownik zatrudniony na umowę o pracę może wykorzystać w roku kalendarzowym wymiar 2 dni. Można również rozbić te dni na godziny - wówczas przysługuje 16h. Wniosek o udzielenie wolnego z powodu działania siły wyższej wypisujemy na pełne godziny.",
     ua: "Кожен співробітник, який працює на підставі трудового договору, може використати до 2-х днів відгулу у зв'язку з форс-мажорними обставинами у календарному році. Також можна розбити ці дні на години — в такому випадку нараховується 16 годин. Заява на відгул у зв'язку з форс-мажорними обставинами виписується в повних годинах.",
     en: "Each employee with a contract of employment can take up to 2 days in a calendar year. It is also possible to break these days down into hours - in which case 16 hours are entitled. A request for force majeure leave is written out in full hours.",
     ru: "Каждый сотрудник, работающий на основе трудового договора, может взять до 2 дней отгула в связи с форс-мажорными обстоятельствами в календарном году. Эти дни также можно разбить на часы. В этом случае предоставляется 16 часов. Заявление на отпуск в связи с форс-мажорным обстоятельствам подается на полные рабочие часы.",
@@ -462,9 +462,9 @@ const lngArr = {
     ru: "Время отгула в связи с форс-мажорными обстоятельствами оплачивается в размере 50% от оклада.",
   },
   "force-leave-step-date": {
-    pl: "Wpisz datę – w jaki dzień wnioskujesz o „siłę wyższą”. Jeżeli wnioskujesz na godziny – datę i godziny.",
+    pl: 'Wpisz datę - w jaki dzień wnioskujesz o "siłę wyższą". Jeżeli wnioskujesz na godziny - datę i godziny.',
     ua: "Напишіть дату — день, коли вам потрібен відгул у зв'язку з форс-мажорними обставинами. Якщо вам потрібен відгул на декілька годин — вкажіть дату та години.",
-    en: "Write the date - what day you are requesting “force majeure”. If you are requesting hours - the date and hours.",
+    en: 'Write the date - what day you are requesting "force majeure". If you are requesting hours - the date and hours.',
     ru: "Укажите дату, когда вы будете отсутствовать в связи с форс-мажорными обстоятельствами. Если вы подаете заявление на определенные часы — укажите дату и часы.",
   },
   "force-leave-step-time": {
@@ -512,19 +512,19 @@ const lngArr = {
   "carers-leave": {
     pl: "Wniosek o urlop opiekuńczy",
     ua: "Заява про надання відпустки по догляду",
-    en: "Request for carer’s leave",
+    en: "Request for carer's leave",
     ru: "Заявление о предоставлении отпуска по уходу",
   },
   "carers-leave-desc-1": {
     pl: "Wniosek o urlop opiekuńczy można wykorzystać, jeżeli masz potrzebę zaopiekowania się członkiem rodziny, który mieszka z tobą.",
     ua: "Ви маєте право подати заяву на відпустку по догляду, якщо вам потрібно доглядати за членом сім'ї, який проживає з вами.",
-    en: "You can request carer’s leave if you have a need to care for a family member who lives with you.",
+    en: "You can request carer's leave if you have a need to care for a family member who lives with you.",
     ru: "Вы можете подать заявление на отпуск по уходу, если вам необходимо ухаживать за членом семьи, который проживает с вами.",
   },
   "carers-leave-desc-2": {
     pl: "W ciągu roku można wykorzystać 5 dni urlopu opiekuńczego. Jest on niepłatny.",
     ua: "Ви можете отримати 5 днів такої відпустки на рік. Відпустка по догляду є не оплачуваною.",
-    en: "You can take 5 days of carer’s leave per year. It is unpaid.",
+    en: "You can take 5 days of carer's leave per year. It is unpaid.",
     ru: "Вы можете взять 5 дней отпуска по уходу в год. Этот вид отпуска не оплачивается.",
   },
   "carers-leave-step-relname": {
@@ -826,5 +826,35 @@ const lngArr = {
     ua: "Надіслати",
     en: "Send",
     ru: "Отправить",
+  },
+  "msg-about": {
+    pl: "O aplikacji",
+    ua: "Про додаток",
+    en: "About the application",
+    ru: "О приложении",
+  },
+  "about-content": {
+    pl: `Platforma Autodoc.help to szybki i niezawodny dostęp do interesujących Cię informacji. Nasz zespół dokłada wszelkich starań, aby zapewnić łatwą drogę do najbardziej aktualnych odpowiedzi na Twoje pytania. Na platformie Autodoc.help można również przekazywać opinie, zadawać dodatkowe pytania lub dzielić się swoimi pomysłami.`,
+    ua: `Платформа "Autodoc.help" - це швидкий і надійний доступ до інформації, що вас цікавить. Наша команда намагається надати легкий шлях до найактуальніших відповідей на ваші запитання. Також на платформі "Autodoc.help" ви можете дати зворотний зв'язок, задати додаткові запитання або поділитися своїми ідеями.`,
+    en: `The Autodoc.help platform is a quick and reliable access to the information you are interested in. Our team tries to provide an easy way to the most relevant answers to your questions. You can also provide feedback, ask additional questions, or share your ideas on the Autodoc.help platform.`,
+    ru: `Платформа "Autodoc.help" - это быстрый и надёжный доступ кинтересующей вас информации. Наша команда старается предоставить лёгкий путь к самым актуальным ответам на ваши вопросы. Так-же, на платформе "Autodoc.help" вы можете дать обратную связь, задать дополнительные вопросы или поделится своими идеями.`,
+  },
+  "about-signature": {
+    pl: "Z poważaniem, zespół Business Excellence Management!",
+    ua: "З повагою, команда Business Excellence Management!",
+    en: "Best Regards, Business Excellence Management team!",
+    ru: "С уважением, команда Business Excellence Management!",
+  },
+  "timer-msg": {
+    pl: "Wciąż tu jesteś? :)",
+    ua: "Ви ще тут? :)",
+    en: "Are you still here? :)",
+    ru: "Вы ещё здесь? :)",
+  },
+  "timer-btn": {
+    pl: "Tak",
+    ua: "Так",
+    en: "Yes",
+    ru: "Да",
   },
 };
