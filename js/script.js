@@ -247,13 +247,12 @@ if (
   localStorage.setItem("entryPath", window.location.pathname);
 }
 
-if (window.location.pathname !== "/index.html") {
+if (!window.location.pathname.includes("index.html")) {
   const backdropTimer = document.createElement("div");
   const timerItem = document.createElement("div");
   const timerMessage = document.createElement("p");
   const timer = document.createElement("p");
   const timerButton = document.createElement("button");
-  let metalink = document.createElement("meta");
 
   backdropTimer.classList.add("backdrop-modal");
   timerItem.classList.add("timer-item");
